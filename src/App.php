@@ -39,6 +39,14 @@ class App
         $webm = $videoFolder . $videoId . '.webm';
         $mp3 = $videoFolder . $videoId . '.mp3';
 
+        if (file_exists($webm) && file_exists($mp3)) {
+            goto done;
+        }
+
+        if (file_exists($mp4)) {
+            goto getHighlight;
+        }
+
         $downloader = new Downloader();
         try {
             $downloader->download('https://www.youtube.com/watch?v=' . $videoId, $mp4);
@@ -48,9 +56,48 @@ class App
 
             return;
         }
-        
 
+        getHighlight:
+        $probedDuration = shell_exec('ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 ' . escapeshellarg($mp4));
+        $splitDuration = explode('.', $probedDuration);
 
-        
+        if (count($splitDuration) === 1) {
+            goto convert;
+        }
+
+        $seconds = (int) $splitDuration[0];
+
+        if ($seconds <= 10) {
+            goto convert;
+        }
+
+        $cutMp4 = $cacheFolder . $videoId . '_cut.mp4';
+
+        if (file_exists($cutMp4)) {
+            goto setCutMp4ToMp4;
+        }
+
+        $startTime = rand(0, $seconds - 10);
+        shell_exec(
+            'ffmpeg -ss '
+            . gmdate('H:i:s', $startTime)
+            . ' -i '
+            . escapeshellarg($mp4)
+            . ' -to '
+            . '00:00:10'
+            . ' -c copy '
+            . escapeshellarg($cutMp4)
+        );
+
+        setCutMp4ToMp4:
+        $mp4 = $cutMp4;
+
+        convert:
+
+        shell_exec('ffmpeg -i ' . escapeshellarg($mp4) . ' -c:v libvpx -quality good -cpu-used 0 -b:v 7000k -qmin 10 -qmax 42 -maxrate 500k -bufsize 1500k -threads 8 -vf scale=-1:1080 -c:a libvorbis -b:a 192k -f webm ' . escapeshellarg($webm));
+        shell_exec('ffmpeg -i ' . escapeshellarg($mp4) . ' ' . escapeshellarg($mp3));
+
+        done:
+        http_response_code(204);
     }
 }
