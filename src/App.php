@@ -35,9 +35,9 @@ class App
         $publicFolder = __DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'public' . DIRECTORY_SEPARATOR;
         $cacheFolder = $publicFolder . 'cache' . DIRECTORY_SEPARATOR;
         $videoFolder = $publicFolder . 'video' . DIRECTORY_SEPARATOR;
-        $mp4 = $cacheFolder . $videoId . 'mp4';
-        $webm = $videoFolder . $videoId . 'webm';
-        $mp3 = $videoFolder . $videoId . 'mp3';
+        $mp4 = $cacheFolder . $videoId . '.mp4';
+        $webm = $videoFolder . $videoId . '.webm';
+        $mp3 = $videoFolder . $videoId . '.mp3';
 
         $downloader = new Downloader();
         try {
