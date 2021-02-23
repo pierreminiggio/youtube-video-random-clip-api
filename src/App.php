@@ -101,6 +101,8 @@ class App
         
         if (! file_exists($webm) || ! file_exists($mp3)) {
             http_response_code(500);
+            
+            return;
         }
 
         done:
