@@ -98,6 +98,10 @@ class App
 
         shell_exec('ffmpeg -i ' . escapeshellarg($mp4) . ' -c:v libvpx -quality good -cpu-used 0 -b:v 7000k -qmin 10 -qmax 42 -maxrate 500k -bufsize 1500k -threads 8 -vf scale=-1:1080 -c:a libvorbis -b:a 192k -f webm ' . escapeshellarg($webm));
         shell_exec('ffmpeg -i ' . escapeshellarg($mp4) . ' ' . escapeshellarg($mp3));
+        
+        if (! file_exists($webm) || ! file_exists($mp3)) {
+            http_response_code(500);
+        }
 
         done:
         http_response_code(204);
