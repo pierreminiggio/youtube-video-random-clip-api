@@ -8,7 +8,7 @@ use Throwable;
 class App
 {
 
-    protected const CLIP_LENGTH = 30;
+    protected const CLIP_LENGTH = 15;
 
     public function run(string $path, ?string $queryParameters, ?string $authHeader): void
     {
