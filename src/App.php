@@ -8,6 +8,8 @@ use Throwable;
 class App
 {
 
+    protected const CLIP_LENGTH = 30;
+
     public function run(string $path, ?string $queryParameters, ?string $authHeader): void
     {
         $config = require
@@ -77,14 +79,14 @@ class App
             goto setCutMp4ToMp4;
         }
 
-        $startTime = rand(0, $seconds - 10);
+        $startTime = rand(0, $seconds - self::CLIP_LENGTH);
         shell_exec(
             'ffmpeg -ss '
             . gmdate('H:i:s', $startTime)
             . ' -i '
             . escapeshellarg($mp4)
             . ' -to '
-            . '00:00:10'
+            . gmdate('H:i:s', self::CLIP_LENGTH)
             . ' -c copy '
             . escapeshellarg($cutMp4)
         );
