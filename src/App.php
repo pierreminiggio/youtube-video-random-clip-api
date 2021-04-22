@@ -45,6 +45,8 @@ class App
             goto done;
         }
 
+        set_time_limit(300);
+
         if (file_exists($mp4)) {
             goto getHighlight;
         }
