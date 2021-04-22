@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "athlon1600/youtube-downloader",
-            "version": "v2.1.1",
+            "version": "v2.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Athlon1600/youtube-downloader.git",
-                "reference": "a595645dec6fc2975caaf8f37dafa3ca303ea2c4"
+                "reference": "8be29b08896aecb252b7e1dbfd4a3f022702f74e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Athlon1600/youtube-downloader/zipball/a595645dec6fc2975caaf8f37dafa3ca303ea2c4",
-                "reference": "a595645dec6fc2975caaf8f37dafa3ca303ea2c4",
+                "url": "https://api.github.com/repos/Athlon1600/youtube-downloader/zipball/8be29b08896aecb252b7e1dbfd4a3f022702f74e",
+                "reference": "8be29b08896aecb252b7e1dbfd4a3f022702f74e",
                 "shasum": ""
             },
             "require": {
@@ -46,9 +46,9 @@
             ],
             "support": {
                 "issues": "https://github.com/Athlon1600/youtube-downloader/issues",
-                "source": "https://github.com/Athlon1600/youtube-downloader/tree/v2.1.1"
+                "source": "https://github.com/Athlon1600/youtube-downloader/tree/v2.1.2"
             },
-            "time": "2020-10-17T13:37:50+00:00"
+            "time": "2021-03-04T02:33:34+00:00"
         },
         {
             "name": "pierreminiggio/mp4-youtube-video-downloader",
