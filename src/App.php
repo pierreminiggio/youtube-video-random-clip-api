@@ -55,10 +55,14 @@ class App
         try {
             $downloader->download('https://www.youtube.com/watch?v=' . $videoId, $mp4);
         } catch (Throwable $e) {
-            echo json_encode(['error' => $e->getMessage()]);
-            http_response_code(500);
+            if ($e->getMessage() !== 'Best link not found') {
+                echo json_encode(['error' => $e->getMessage()]);
+                http_response_code(500);
 
-            return;
+                return;
+            }
+            
+            shell_exec('youtube-dl https://youtu.be/' . $videoId . ' -f mp4 --output ' . $mp4);
         }
 
         getHighlight:
