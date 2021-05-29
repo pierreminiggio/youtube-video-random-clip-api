@@ -75,7 +75,7 @@ class App
 
         $seconds = (int) $splitDuration[0];
 
-        if ($seconds <= 10) {
+        if ($seconds <= self::CLIP_LENGTH) {
             goto convert;
         }
 
