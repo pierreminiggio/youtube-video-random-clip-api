@@ -65,6 +65,12 @@ class App
             shell_exec('youtube-dl https://youtu.be/' . $videoId . ' -f mp4 --output ' . $mp4);
         }
 
+        if (! file_exists($mp4)) {
+            http_response_code(500);
+            echo json_encode(['error' => 'mp4 file failed to get downloaded']);
+            die;
+        }
+
         getHighlight:
         $probedDuration = shell_exec('ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 ' . escapeshellarg($mp4));
         $splitDuration = explode('.', $probedDuration);
@@ -97,6 +103,12 @@ class App
             . escapeshellarg($cutMp4)
         );
 
+        if (! file_exists($cutMp4)) {
+            http_response_code(500);
+            echo json_encode(['error' => 'Cut mp4 file failed to get created']);
+            die;
+        }
+
         setCutMp4ToMp4:
         $mp4 = $cutMp4;
 
@@ -107,8 +119,8 @@ class App
         
         if (! file_exists($webm) || ! file_exists($mp3)) {
             http_response_code(500);
-            
-            return;
+            echo json_encode(['error' => 'webm and mp3 files are missing']);
+            die;
         }
 
         done:
