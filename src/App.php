@@ -2,6 +2,8 @@
 
 namespace App;
 
+use PierreMiniggio\ConfigProvider\ConfigProvider;
+use PierreMiniggio\GithubActionRunStarterAndArtifactDownloader\GithubActionRunStarterAndArtifactDownloaderFactory;
 use PierreMiniggio\MP4YoutubeVideoDownloader\Downloader;
 use Throwable;
 
@@ -12,13 +14,46 @@ class App
 
     public function run(string $path, ?string $queryParameters, ?string $authHeader): void
     {
-        $config = require
-            __DIR__
-            . DIRECTORY_SEPARATOR
-            . '..'
-            . DIRECTORY_SEPARATOR
-            . 'config.php'
-        ;
+        $projectFolder = __DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR;
+
+        $configProvider = new ConfigProvider($projectFolder);
+        $config = $configProvider->get();
+
+        $yt1dApiRepoConfig = $config['yt1dApiRepo'] ?? null;
+
+        if (! $yt1dApiRepoConfig) {
+            http_response_code(500);
+            echo json_encode(['error' => 'Unset yt1dApiRepo config error']);
+            
+            return;
+        }
+
+        $githubActionToken = $yt1dApiRepoConfig['token'] ?? null;
+
+        if (! $githubActionToken) {
+            http_response_code(500);
+            echo json_encode(['error' => 'Unset githubActionToken config error']);
+            
+            return;
+        }
+
+        $yt1dApiOwner = $yt1dApiRepoConfig['owner'] ?? null;
+
+        if (! $yt1dApiOwner) {
+            http_response_code(500);
+            echo json_encode(['error' => 'Unset yt1dApiOwner config error']);
+            
+            return;
+        }
+
+        $yt1dApiRepo = $yt1dApiRepoConfig['repo'] ?? null;
+
+        if (! $yt1dApiRepo) {
+            http_response_code(500);
+            echo json_encode(['error' => 'Unset yt1dApiRepo config error']);
+            
+            return;
+        }
         
         if (! $authHeader || $authHeader !== 'Bearer ' . $config['apiToken']) {
             http_response_code(401);
@@ -63,6 +98,48 @@ class App
             }
             
             shell_exec('youtube-dl https://youtu.be/' . $videoId . ' -f mp4 --output ' . $mp4);
+        }
+
+        if (! file_exists($mp4)) {
+            $githubActionRunStarterAndArtifactDownloader = (
+                new GithubActionRunStarterAndArtifactDownloaderFactory()
+            )->make();
+
+            $artifacts = $githubActionRunStarterAndArtifactDownloader->runActionAndGetArtifacts(
+                $githubActionToken,
+                $yt1dApiOwner,
+                $yt1dApiRepo,
+                'get-link.yml',
+                60
+            );
+
+            if (! $artifacts) {
+                http_response_code(500);
+                echo json_encode(['error' => 'No artifact']);
+                
+                return;
+            }
+    
+            $artifact = $artifacts[0];
+    
+            if (! file_exists($artifact)) {
+                http_response_code(500);
+                echo json_encode(['error' => 'Artifact missing']);
+                
+                return;
+            }
+    
+            $downloadLink = trim(file_get_contents($artifact));
+            unlink($artifact);
+
+            $fp = fopen($mp4, 'w+');
+            $ch = curl_init($downloadLink);
+            curl_setopt($ch, CURLOPT_TIMEOUT, 50);
+            curl_setopt($ch, CURLOPT_FILE, $fp);
+            curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+            curl_exec($ch);
+            curl_close($ch);
+            fclose($fp);
         }
 
         if (! file_exists($mp4)) {

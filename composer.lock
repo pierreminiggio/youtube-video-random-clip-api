@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c3452c8fba08a14a2aad9392770dc30d",
+    "content-hash": "308035eec4acf74c40c5c82eec17d230",
     "packages": [
         {
             "name": "athlon1600/youtube-downloader",
@@ -49,6 +49,384 @@
                 "source": "https://github.com/Athlon1600/youtube-downloader/tree/v2.1.2"
             },
             "time": "2021-03-04T02:33:34+00:00"
+        },
+        {
+            "name": "pierreminiggio/config-provider",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/pierreminiggio/php-config-provider.git",
+                "reference": "0c8c3de8d1b4540005b45b1f5ec2ac6a6b4b04b1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/pierreminiggio/php-config-provider/zipball/0c8c3de8d1b4540005b45b1f5ec2ac6a6b4b04b1",
+                "reference": "0c8c3de8d1b4540005b45b1f5ec2ac6a6b4b04b1",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^8.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "PierreMiniggio\\ConfigProvider\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Pierre MINIGGIO",
+                    "email": "pierre@miniggiodev.fr"
+                }
+            ],
+            "description": "Config Provider",
+            "support": {
+                "issues": "https://github.com/pierreminiggio/php-config-provider/issues",
+                "source": "https://github.com/pierreminiggio/php-config-provider/tree/1.0.0"
+            },
+            "time": "2021-05-21T15:05:42+00:00"
+        },
+        {
+            "name": "pierreminiggio/github-action-artifact-downloader",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/pierreminiggio/php-github-action-artifact-downloader.git",
+                "reference": "5575b415a1df4e19729959d91b9acd10865c94a6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/pierreminiggio/php-github-action-artifact-downloader/zipball/5575b415a1df4e19729959d91b9acd10865c94a6",
+                "reference": "5575b415a1df4e19729959d91b9acd10865c94a6",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.4.0",
+                "pierreminiggio/github-user-agent": "^2.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "PierreMiniggio\\GithubActionArtifactDownloader\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Pierre MINIGGIO",
+                    "email": "pierre@miniggiodev.fr"
+                }
+            ],
+            "support": {
+                "issues": "https://github.com/pierreminiggio/php-github-action-artifact-downloader/issues",
+                "source": "https://github.com/pierreminiggio/php-github-action-artifact-downloader/tree/2.0.0"
+            },
+            "time": "2022-05-29T20:09:10+00:00"
+        },
+        {
+            "name": "pierreminiggio/github-action-run",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/pierreminiggio/php-github-action-run.git",
+                "reference": "b9d354a52eae522e6f778029367c71aeabe68389"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/pierreminiggio/php-github-action-run/zipball/b9d354a52eae522e6f778029367c71aeabe68389",
+                "reference": "b9d354a52eae522e6f778029367c71aeabe68389",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.4.0",
+                "pierreminiggio/github-statuses-enum": "^2.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "PierreMiniggio\\GithubActionRun\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Pierre MINIGGIO",
+                    "email": "pierre@miniggiodev.fr"
+                }
+            ],
+            "support": {
+                "issues": "https://github.com/pierreminiggio/php-github-action-run/issues",
+                "source": "https://github.com/pierreminiggio/php-github-action-run/tree/2.0.0"
+            },
+            "time": "2022-05-29T19:58:26+00:00"
+        },
+        {
+            "name": "pierreminiggio/github-action-run-artifacts-lister",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/pierreminiggio/php-github-action-run-artifacts-lister.git",
+                "reference": "f7713e5586ecd0f508dc2197ba43d930592998ab"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/pierreminiggio/php-github-action-run-artifacts-lister/zipball/f7713e5586ecd0f508dc2197ba43d930592998ab",
+                "reference": "f7713e5586ecd0f508dc2197ba43d930592998ab",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.4.0",
+                "pierreminiggio/github-user-agent": "^2.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "PierreMiniggio\\GithubActionRunArtifactsLister\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Pierre MINIGGIO",
+                    "email": "pierre@miniggiodev.fr"
+                }
+            ],
+            "support": {
+                "issues": "https://github.com/pierreminiggio/php-github-action-run-artifacts-lister/issues",
+                "source": "https://github.com/pierreminiggio/php-github-action-run-artifacts-lister/tree/2.0.0"
+            },
+            "time": "2022-05-29T20:03:13+00:00"
+        },
+        {
+            "name": "pierreminiggio/github-action-run-creator",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/pierreminiggio/php-github-action-run-creator.git",
+                "reference": "2b91698ea13225c5cc8cc6d037992f09e216c3f3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/pierreminiggio/php-github-action-run-creator/zipball/2b91698ea13225c5cc8cc6d037992f09e216c3f3",
+                "reference": "2b91698ea13225c5cc8cc6d037992f09e216c3f3",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.4.0",
+                "pierreminiggio/github-user-agent": "^2.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "PierreMiniggio\\GithubActionRunCreator\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Pierre MINIGGIO",
+                    "email": "pierre@miniggiodev.fr"
+                }
+            ],
+            "support": {
+                "issues": "https://github.com/pierreminiggio/php-github-action-run-creator/issues",
+                "source": "https://github.com/pierreminiggio/php-github-action-run-creator/tree/2.0.0"
+            },
+            "time": "2022-05-29T20:05:52+00:00"
+        },
+        {
+            "name": "pierreminiggio/github-action-run-detailer",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/pierreminiggio/php-github-action-run-detailer.git",
+                "reference": "6db8c8e7a0728c91682ef5bc583602cf5e3737e6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/pierreminiggio/php-github-action-run-detailer/zipball/6db8c8e7a0728c91682ef5bc583602cf5e3737e6",
+                "reference": "6db8c8e7a0728c91682ef5bc583602cf5e3737e6",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.4.0",
+                "pierreminiggio/github-action-run": "^2.0",
+                "pierreminiggio/github-user-agent": "^2.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "PierreMiniggio\\GithubActionRunDetailer\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Pierre MINIGGIO",
+                    "email": "pierre@miniggiodev.fr"
+                }
+            ],
+            "support": {
+                "issues": "https://github.com/pierreminiggio/php-github-action-run-detailer/issues",
+                "source": "https://github.com/pierreminiggio/php-github-action-run-detailer/tree/2.0.0"
+            },
+            "time": "2022-05-29T20:11:30+00:00"
+        },
+        {
+            "name": "pierreminiggio/github-action-run-starter-and-artifact-downloader",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/pierreminiggio/php-github-action-run-starter-and-artifact-downloader.git",
+                "reference": "86e044d76339457f3fce57a1c223aa5ef42103e2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/pierreminiggio/php-github-action-run-starter-and-artifact-downloader/zipball/86e044d76339457f3fce57a1c223aa5ef42103e2",
+                "reference": "86e044d76339457f3fce57a1c223aa5ef42103e2",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.4.0",
+                "pierreminiggio/github-action-artifact-downloader": "^2.0",
+                "pierreminiggio/github-action-run-artifacts-lister": "^2.0",
+                "pierreminiggio/github-action-run-creator": "^2.0",
+                "pierreminiggio/github-action-run-detailer": "^2.0",
+                "pierreminiggio/github-action-runs-lister": "^4.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^9.5"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "PierreMiniggio\\GithubActionRunStarterAndArtifactDownloader\\": "src/",
+                    "PierreMiniggio\\GithubActionRunStarterAndArtifactDownloaderTest\\": "tests/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Pierre MINIGGIO",
+                    "email": "pierre@miniggiodev.fr"
+                }
+            ],
+            "support": {
+                "issues": "https://github.com/pierreminiggio/php-github-action-run-starter-and-artifact-downloader/issues",
+                "source": "https://github.com/pierreminiggio/php-github-action-run-starter-and-artifact-downloader/tree/2.0.0"
+            },
+            "time": "2022-05-29T20:18:24+00:00"
+        },
+        {
+            "name": "pierreminiggio/github-action-runs-lister",
+            "version": "4.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/pierreminiggio/php-github-action-runs-lister.git",
+                "reference": "043cb5ed8c6934d8a9d12a9b53b90e665639c0de"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/pierreminiggio/php-github-action-runs-lister/zipball/043cb5ed8c6934d8a9d12a9b53b90e665639c0de",
+                "reference": "043cb5ed8c6934d8a9d12a9b53b90e665639c0de",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.4.0",
+                "pierreminiggio/github-action-run": "^2.0",
+                "pierreminiggio/github-user-agent": "^2.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "PierreMiniggio\\GithubActionRunsLister\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Pierre MINIGGIO",
+                    "email": "pierre@miniggiodev.fr"
+                }
+            ],
+            "support": {
+                "issues": "https://github.com/pierreminiggio/php-github-action-runs-lister/issues",
+                "source": "https://github.com/pierreminiggio/php-github-action-runs-lister/tree/4.0.0"
+            },
+            "time": "2022-05-29T20:01:33+00:00"
+        },
+        {
+            "name": "pierreminiggio/github-statuses-enum",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/pierreminiggio/php-github-statuses-enum.git",
+                "reference": "94dd07911d379698f1ca655044ee6b0de2dbd748"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/pierreminiggio/php-github-statuses-enum/zipball/94dd07911d379698f1ca655044ee6b0de2dbd748",
+                "reference": "94dd07911d379698f1ca655044ee6b0de2dbd748",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "PierreMiniggio\\GithubStatusesEnum\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Pierre MINIGGIO",
+                    "email": "pierre@miniggiodev.fr"
+                }
+            ],
+            "support": {
+                "issues": "https://github.com/pierreminiggio/php-github-statuses-enum/issues",
+                "source": "https://github.com/pierreminiggio/php-github-statuses-enum/tree/2.0.0"
+            },
+            "time": "2022-05-29T19:56:55+00:00"
+        },
+        {
+            "name": "pierreminiggio/github-user-agent",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/pierreminiggio/php-github-user-agent.git",
+                "reference": "29dafa6b033084180ff7ba7471698335e37c0cba"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/pierreminiggio/php-github-user-agent/zipball/29dafa6b033084180ff7ba7471698335e37c0cba",
+                "reference": "29dafa6b033084180ff7ba7471698335e37c0cba",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "PierreMiniggio\\GithubUserAgent\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Pierre MINIGGIO",
+                    "email": "pierre@miniggiodev.fr"
+                }
+            ],
+            "support": {
+                "issues": "https://github.com/pierreminiggio/php-github-user-agent/issues",
+                "source": "https://github.com/pierreminiggio/php-github-user-agent/tree/2.0.0"
+            },
+            "time": "2022-05-29T19:54:25+00:00"
         },
         {
             "name": "pierreminiggio/mp4-youtube-video-downloader",

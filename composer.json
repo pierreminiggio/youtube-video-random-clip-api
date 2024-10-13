@@ -15,6 +15,8 @@
         "sort-packages": true
     },
     "require": {
+        "pierreminiggio/config-provider": "^1.0",
+        "pierreminiggio/github-action-run-starter-and-artifact-downloader": "^2.0",
         "pierreminiggio/mp4-youtube-video-downloader": "^1.0"
     }
 }
