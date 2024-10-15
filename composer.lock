@@ -507,16 +507,16 @@
         },
         {
             "name": "pierreminiggio/mp4-youtube-video-downloader",
-            "version": "2.1.0",
+            "version": "2.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pierreminiggio/php-mp4-youtube-video-downloader.git",
-                "reference": "7d538c5070a4d32c381838610c9329f8616bda19"
+                "reference": "3796612cfed50e9cd4dcd7b74939d5494c2c3227"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pierreminiggio/php-mp4-youtube-video-downloader/zipball/7d538c5070a4d32c381838610c9329f8616bda19",
-                "reference": "7d538c5070a4d32c381838610c9329f8616bda19",
+                "url": "https://api.github.com/repos/pierreminiggio/php-mp4-youtube-video-downloader/zipball/3796612cfed50e9cd4dcd7b74939d5494c2c3227",
+                "reference": "3796612cfed50e9cd4dcd7b74939d5494c2c3227",
                 "shasum": ""
             },
             "require": {
@@ -540,9 +540,9 @@
             "description": "Vegas Renderer",
             "support": {
                 "issues": "https://github.com/pierreminiggio/php-mp4-youtube-video-downloader/issues",
-                "source": "https://github.com/pierreminiggio/php-mp4-youtube-video-downloader/tree/2.1.0"
+                "source": "https://github.com/pierreminiggio/php-mp4-youtube-video-downloader/tree/2.1.1"
             },
-            "time": "2024-10-15T06:31:14+00:00"
+            "time": "2024-10-15T06:55:18+00:00"
         }
     ],
     "packages-dev": [],
