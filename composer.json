@@ -16,6 +16,6 @@
     },
     "require": {
         "pierreminiggio/config-provider": "^1.0",
-        "pierreminiggio/mp4-youtube-video-downloader": "^2.0"
+        "pierreminiggio/mp4-youtube-video-downloader": "^3.0"
     }
 }

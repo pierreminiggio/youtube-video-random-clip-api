@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "15ba1e4b746c92c101a58ec000544424",
+    "content-hash": "dd44798ebf5c42932b2ca9d85644c22d",
     "packages": [
         {
             "name": "athlon1600/php-curl-client",
@@ -507,16 +507,16 @@
         },
         {
             "name": "pierreminiggio/mp4-youtube-video-downloader",
-            "version": "2.1.1",
+            "version": "3.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pierreminiggio/php-mp4-youtube-video-downloader.git",
-                "reference": "3796612cfed50e9cd4dcd7b74939d5494c2c3227"
+                "reference": "ccd3a55d8b7ba0a8d0cf7c15744477b39ea16da3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pierreminiggio/php-mp4-youtube-video-downloader/zipball/3796612cfed50e9cd4dcd7b74939d5494c2c3227",
-                "reference": "3796612cfed50e9cd4dcd7b74939d5494c2c3227",
+                "url": "https://api.github.com/repos/pierreminiggio/php-mp4-youtube-video-downloader/zipball/ccd3a55d8b7ba0a8d0cf7c15744477b39ea16da3",
+                "reference": "ccd3a55d8b7ba0a8d0cf7c15744477b39ea16da3",
                 "shasum": ""
             },
             "require": {
@@ -540,9 +540,9 @@
             "description": "Vegas Renderer",
             "support": {
                 "issues": "https://github.com/pierreminiggio/php-mp4-youtube-video-downloader/issues",
-                "source": "https://github.com/pierreminiggio/php-mp4-youtube-video-downloader/tree/2.1.1"
+                "source": "https://github.com/pierreminiggio/php-mp4-youtube-video-downloader/tree/3.0.0"
             },
-            "time": "2024-10-15T06:55:18+00:00"
+            "time": "2024-10-15T07:13:23+00:00"
         }
     ],
     "packages-dev": [],
