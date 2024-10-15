@@ -4,29 +4,106 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "308035eec4acf74c40c5c82eec17d230",
+    "content-hash": "15ba1e4b746c92c101a58ec000544424",
     "packages": [
         {
-            "name": "athlon1600/youtube-downloader",
-            "version": "v2.1.2",
+            "name": "athlon1600/php-curl-client",
+            "version": "v1.2.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/Athlon1600/youtube-downloader.git",
-                "reference": "8be29b08896aecb252b7e1dbfd4a3f022702f74e"
+                "url": "https://github.com/Athlon1600/php-curl-client.git",
+                "reference": "eff146de74ee3a4a9a7de1511e300b65b5c8efd2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Athlon1600/youtube-downloader/zipball/8be29b08896aecb252b7e1dbfd4a3f022702f74e",
-                "reference": "8be29b08896aecb252b7e1dbfd4a3f022702f74e",
+                "url": "https://api.github.com/repos/Athlon1600/php-curl-client/zipball/eff146de74ee3a4a9a7de1511e300b65b5c8efd2",
+                "reference": "eff146de74ee3a4a9a7de1511e300b65b5c8efd2",
                 "shasum": ""
             },
             "require": {
                 "ext-curl": "*",
                 "ext-json": "*",
-                "php": "^5.6 || ^7.0"
+                "php": "^7.3|^8.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "^5.7|6.2|^7.0"
+                "phpunit/phpunit": "^7.0 || ^8.0 || ^9.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Curl\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Simple PHP cURL Client",
+            "keywords": [
+                "php curl client"
+            ],
+            "support": {
+                "issues": "https://github.com/Athlon1600/php-curl-client/issues",
+                "source": "https://github.com/Athlon1600/php-curl-client/tree/v1.2.0"
+            },
+            "time": "2023-10-24T23:17:09+00:00"
+        },
+        {
+            "name": "athlon1600/php-curl-file-downloader",
+            "version": "v1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Athlon1600/php-curl-file-downloader.git",
+                "reference": "66391a0b89e2ed8b42ed6341e111f180697e0c5f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Athlon1600/php-curl-file-downloader/zipball/66391a0b89e2ed8b42ed6341e111f180697e0c5f",
+                "reference": "66391a0b89e2ed8b42ed6341e111f180697e0c5f",
+                "shasum": ""
+            },
+            "require": {
+                "athlon1600/php-curl-client": "^1.0",
+                "ext-curl": "*"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^7.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "CurlDownloader\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "support": {
+                "issues": "https://github.com/Athlon1600/php-curl-file-downloader/issues",
+                "source": "https://github.com/Athlon1600/php-curl-file-downloader/tree/v1.0.2"
+            },
+            "time": "2021-02-25T20:29:06+00:00"
+        },
+        {
+            "name": "athlon1600/youtube-downloader",
+            "version": "v4.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Athlon1600/youtube-downloader.git",
+                "reference": "3e59fc1be08be1ece9b121ae6b20b2e46b7a9c38"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Athlon1600/youtube-downloader/zipball/3e59fc1be08be1ece9b121ae6b20b2e46b7a9c38",
+                "reference": "3e59fc1be08be1ece9b121ae6b20b2e46b7a9c38",
+                "shasum": ""
+            },
+            "require": {
+                "athlon1600/php-curl-file-downloader": "^1.0",
+                "ext-curl": "*",
+                "ext-json": "*",
+                "php": "^7.4|^8.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^8.0 || ^9.0 || ^10.0"
             },
             "type": "library",
             "autoload": {
@@ -46,9 +123,9 @@
             ],
             "support": {
                 "issues": "https://github.com/Athlon1600/youtube-downloader/issues",
-                "source": "https://github.com/Athlon1600/youtube-downloader/tree/v2.1.2"
+                "source": "https://github.com/Athlon1600/youtube-downloader/tree/v4.0.0"
             },
-            "time": "2021-03-04T02:33:34+00:00"
+            "time": "2023-11-12T21:57:04+00:00"
         },
         {
             "name": "pierreminiggio/config-provider",
@@ -430,21 +507,22 @@
         },
         {
             "name": "pierreminiggio/mp4-youtube-video-downloader",
-            "version": "1.0.01",
+            "version": "2.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pierreminiggio/php-mp4-youtube-video-downloader.git",
-                "reference": "97cdceebb789a1dc6a620d14460968d851d91cc2"
+                "reference": "7d538c5070a4d32c381838610c9329f8616bda19"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pierreminiggio/php-mp4-youtube-video-downloader/zipball/97cdceebb789a1dc6a620d14460968d851d91cc2",
-                "reference": "97cdceebb789a1dc6a620d14460968d851d91cc2",
+                "url": "https://api.github.com/repos/pierreminiggio/php-mp4-youtube-video-downloader/zipball/7d538c5070a4d32c381838610c9329f8616bda19",
+                "reference": "7d538c5070a4d32c381838610c9329f8616bda19",
                 "shasum": ""
             },
             "require": {
-                "athlon1600/youtube-downloader": "^2.0",
-                "php": "^7.2 || ^8.0"
+                "athlon1600/youtube-downloader": "^4.0",
+                "php": "^7.2 || ^8.0",
+                "pierreminiggio/github-action-run-starter-and-artifact-downloader": "^2.0"
             },
             "type": "library",
             "autoload": {
@@ -462,9 +540,9 @@
             "description": "Vegas Renderer",
             "support": {
                 "issues": "https://github.com/pierreminiggio/php-mp4-youtube-video-downloader/issues",
-                "source": "https://github.com/pierreminiggio/php-mp4-youtube-video-downloader/tree/1.0.01"
+                "source": "https://github.com/pierreminiggio/php-mp4-youtube-video-downloader/tree/2.1.0"
             },
-            "time": "2021-02-22T18:53:12+00:00"
+            "time": "2024-10-15T06:31:14+00:00"
         }
     ],
     "packages-dev": [],
